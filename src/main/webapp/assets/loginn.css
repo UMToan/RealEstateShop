@@ -1,0 +1,224 @@
+/*==== font chÆ°Ìƒ Æ¡Ì‰ lÃ¢Ì�y Æ¡Ì‰ google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    height: 600px;
+    width: 200%;
+    transition: height 0.2s ease;
+
+}
+
+.container .form {
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 600px;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+    /*600 laÌ€ in Ä‘Ã¢Ì£m nha*/
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #00c4cc;
+    border-radius: 25px;
+}
+
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    /*outline laÌ€ Ä‘Æ°Æ¡Ì€ng viÃªÌ€n bao bÃªn ngoaÌ€i*/
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    /*transparent laÌ€ giaÌ� triÌ£ maÌ€u trong suÃ´t*/
+    transition: all 0.2s ease;
+    /*transition laÌ€ Ä‘iÃªÌ€u khiÃªÌ‰n tÃ´Ì�c Ä‘Ã´Ì£ hiÃªÌ£u Æ°Ì�ng,
+            ease laÌ€ táº¡o hiá»‡u á»©ng chuyá»ƒn Ä‘á»•i khi báº¯t Ä‘áº§u thÃ¬ cháº­m sau Ä‘Ã³ nhanh dáº§n vÃ  gáº§n káº¿t thÃºc láº¡i cháº­m tá»« tá»«*/
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #00c4cc;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /*transfrom laÌ€ thuÃ´Ì£c tiÌ�nh thay Ä‘Ã´Ì‰i viÌ£ triÌ�, hiÌ€nh daÌ�ng, xoay theo nhiÃªÌ€u hÆ°Æ¡Ì�ng, 
+                                translateY laÌ€ di chuyÃªÌ‰n theo truÌ£c doÌ£c*/
+    color: #999;
+    font-size: 23px;
+}
+
+.input-field input:is(:focus, :valid)~i {
+    /*css element ~ laÌ€ choÌ£n tÃ¢Ì�t caÌ‰ theÌ‰ i Ä‘Æ°Ì�ng sau theÌ‰ input */
+    color: #00c4cc;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #00c4cc;
+}
+
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #00c4cc;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /*khoaÌ‰ng caÌ�ch giÆ°Ìƒa caÌ�c chÆ°Ìƒ */
+    border-radius: 6px;
+    background-color: #00c4cc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form .button__fb input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: #0000FF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form .button__fb i {
+    margin-left: 30px;
+}
+
+.form .button__gg input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form .button__gg i {
+    margin-left: 30px;
+}
+
+.button input:hover {
+    background-color: #008080;
+}
+
+.button__fb input:hover {
+    background-color: #064EBD;
+}
+
+.button__gg input:hover {
+    background-color: #B90606;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}

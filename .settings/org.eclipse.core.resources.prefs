@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/main/java/BdsShop/Dao/ProductsDao.java=UTF-8
+encoding//src/main/java/BdsShop/Service/User/IProductDetailService.java=UTF-8
+encoding//src/main/java/BdsShop/Service/User/PaginatesServiceImpl.java=UTF-8
+encoding//src/main/java/BdsShop/Service/User/ProductDetailServiceImpl.java=UTF-8
+encoding//src/main/java/BdsShop/UserController/CategoryController.java=UTF-8
+encoding//src/main/java/BdsShop/UserController/HomeController.java=UTF-8
+encoding//src/main/java/BdsShop/UserController/ProductController.java=UTF-8
+encoding//src/main/java/BdsShop/UserController/ProductRentsController.java=UTF-8
+encoding//src/main/java/BdsShop/UserController/UserController.java=UTF-8
+encoding//src/main/resources/loginn.css=UTF-8
+encoding//src/main/resources/style.css=UTF-8
+encoding//src/main/webapp/WEB-INF/views/users/post/newPost.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/users/products/product.jsp=UTF-8
+encoding//src/main/webapp/assets/details_phh.html=UTF-8
+encoding//src/main/webapp/assets/loginn.css=UTF-8
+encoding//src/main/webapp/assets/style.css=UTF-8

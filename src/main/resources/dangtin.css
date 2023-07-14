@@ -1,0 +1,357 @@
+html {
+    font-size: 62.5%;
+    /*đặt font 62.5% tương đương là 10px*/
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    /*reset margin và padding về 0 vì mặc định không phải không*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+}
+
+.header__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    z-index: 3;
+}
+
+.logo {
+    width: 17rem;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+.menu__item {
+    /* margin-left: 1rem; */
+    position: relative;
+    
+    /*cái này là giúp cố định vị trí phần tử khi trỏ tới */
+}
+
+.menu__link:hover {
+    color: #00c4cc;
+    border-bottom: 3px solid #00c4cc;
+}
+
+.menu__link__child:hover {
+    color: #00c4cc;
+}
+
+.menu__item:hover .menu__child {
+    opacity: 1;
+    /*opaccity 1 là hiện lên luôn độ mờ đậm nhất*/
+    visibility: visible;
+    /*giúp các phần từ hiện trên màn hình*/
+}
+
+.menu__child {
+    position: absolute;
+    /*còn cái này thì ngược lại giúp sổ ra cái menu á*/
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: inline-block;
+    /*tác dụng cho các thẻ li nằm trên 1 đường thẳng*/
+    /*có thẻ dùng display none nhưng khi dùng nó thì khôgn thể dùng transition*/
+    opacity: 0;
+    /*opacity là độ mờ có từ 0 - 0.5 - 1*/
+    visibility: hidden;
+    /*giúp các phần từ không hiện trên màn hình*/
+    transition: 0.25s linear;
+    /*hiệu ứng á*/
+    
+}
+
+.menu__child-list li {
+    list-style-type: none;
+    /*làm mất dấu chấm*/
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+}
+
+.menu__link {
+    color: black;
+    text-transform: uppercase;
+    /*viết in đậm*/
+    text-decoration: none;
+    /*định dạng văn bản thường bỏ ra thì bị gạch dưới */
+    font-size: 1.4rem;
+    display: block;
+    /*giúp các phần từ cố định riêng biệt trên 1 hàng dọc*/
+    padding: 20px 10px 20px 10px;
+    margin-right: 10px;
+}
+
+.menu__link__child {
+    color: black;
+    text-transform: uppercase;
+    /*viết in đậm*/
+    text-decoration: none;
+    /*định dạng văn bản thường bỏ ra thì bị gạch dưới */
+    font-size: 1rem;
+    display: block;
+    
+    /*giúp các phần từ cố định riêng biệt trên 1 hàng dọc*/
+}
+
+.content {
+    background-color: rgb(249, 249, 249);
+    position: relative;
+    display: flex;
+    min-height: var(--window-height);
+    height: 1000px;
+}
+
+.content__child__1 {
+    position: absolute;
+    width: 64px;
+    background-color: white;
+    height: 100%;
+    box-shadow: rgb(182 182 182 / 18%) 0px 4px 8px;
+    z-index: 99;
+}
+
+.content__child__2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding-left: 64px;
+}
+
+.content__child__child__2 {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.content__child__child__child__2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+/* side bar */
+.sidebar-content {
+    margin-top: 100px;
+    display: flex;
+    height: 210vh;
+}
+.sidebar {
+    background-color: #ececec;
+    width: 250px;
+    height: 100%;
+    padding-top: 30px;  
+    left: 0;
+    border-right: solid 1px #e6e6e6;
+    /* margin-top: 100px; */
+}
+
+.profile_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.sidebar h4 {
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #000;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-size: 14px;
+    border-bottom: #e6e6e6 solid 1px;
+}
+
+.sidebar a:hover {
+    background-color: #00c4cc;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+/* content */
+.content {
+    width: 100%;
+    /* padding-top: 100px;     */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.heading {
+    border-bottom: solid #000 1px;
+    height: 100px;
+    width: 100%;
+    font-size: 20px;
+}
+.heading .content-heading {
+    padding: 42px 60px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.content-h2-heading {
+    padding: 25px 60px;
+
+}
+
+.heading .content-about {
+    padding: 15px 60px;
+}
+
+.content-about .about {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.about input {
+    display: block;
+}
+
+.about select {
+    display: block;
+}
+
+.about #about-a {
+    width: 70%;
+}
+
+.about #about-b {
+    display: block;
+    height: 250px;
+    width: 70%;
+}
+
+.form-text {
+    display: block;
+    margin-top: 0.25rem;
+} 
+.text-muted {
+    color: #6c757d;
+    
+}
+
+.about small {
+    text-transform: lowercase;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.content-h3-heading {
+    padding: 10px 0;
+}
+
+.form-image .form-image-text {
+    font-size: 13px;
+    padding: 10px;
+}
+
+.form-choose-image {
+    margin: 15px;
+    border: dashed 2px;
+    padding: 20px;
+    width: 70%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-choose-image label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.content-btn .btn{
+    width: 70%;
+    margin: 15px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    background-color: #00c4cc;
+}
+
+
+/* footer */
+.last__end {
+    background-image: linear-gradient(0, rgba(61, 192, 172, 0.5), rgba(61, 192, 172, 0.5)), url(image/back.jng.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.information__first {
+    list-style-type: none;
+    margin-left: 12rem;
+}
+
+.information__first .text__end {
+    font-size: 14px;
+    padding: 10px;
+
+}
+
+.information__first .logo {
+    margin-top: 3rem;
+}
+
+.information__two__child {
+    list-style-type: none;
+    margin-top: 3rem;
+    margin-right: 5rem;
+    font-size: 14px;
+}
+
+.in__two__childx2 {
+    margin-top: 1rem;
+
+}
+

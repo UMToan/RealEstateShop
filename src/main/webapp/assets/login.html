@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login and Registration</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="forms">
+        <div class="form login">
+          <span class="title">Đăng Nhập</span>
+          <form action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Nhập email của bạn" required>
+              <i class="uil uil-envelope icon"></i>
+            </div>
+
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Nhập mật khẩu" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck">
+                <label for="logCheck" class="text">Nhớ tài khoản</label>
+              </div>
+
+              <a href="#" class="text">Quên mật khẩu?</a>
+              
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Đăng nhập">
+            </div>
+            <div class="input-field button__fb">
+              <input type="button" value="Đăng nhập với Facebook">
+              <i class="uil uil-facebook"></i>
+            </div>
+            <div class="input-field button__gg">
+              <input type="button" value="Đăng nhập với Google">
+              <i class="uil uil-google"></i>
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">Bạn chưa là thành viên?
+              <a href="#" class="text signup-link">Đăng ký ngay</a>
+              <a href="user.html" class="text">/ Trang chủ</a>
+            </span>
+          </div>
+
+        </div>
+
+        <!--Registration form -->
+        <div class="form sigup">
+          <span class="title">Đăng ký</span>
+          <form action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Nhập tên của bạn" required>
+              <i class="uil uil-user"></i>
+            </div>
+
+            <div class="input-field">
+              <input type="text" placeholder="Nhập email của bạn" required>
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Nhập mật khẩu" required>
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Nhập lại mật khẩu" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="termCon">
+                <label for="logCheck" class="text">Tối chấp nhận tất cả điều khoản</label>
+              </div>
+
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Đăng ký ngay">
+
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">Bạn đã là thành viên?
+              <a href="#" class="text login-link">Đăng nhập ngay</a>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+
+  </body>
+
+</html>

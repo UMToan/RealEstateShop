@@ -1,0 +1,10 @@
+.content-infor h1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   margin: 50px 25px;
+   padding: 40px 20px;
+   border: solid 2px rgb(210, 201, 201);
+   background-color: #00c4cc;
+}
